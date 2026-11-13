@@ -1,0 +1,3 @@
+# Market observations and uncertainty
+Original technical note for the AdvisorIQ demonstration.
+A daily closing price is not a live executable quote. Check the observation date, market timezone, currency, trading calendar and whether prices are adjusted. A one-month percentage change compares the first and last available observations; it is not a forecast or annualized return. Missing history, provider outages and stale observations must remain visible. Offline demo prices are fictional, even when labeled with a familiar ticker. A stock chart does not provide sufficient evidence for a personalized investment recommendation.

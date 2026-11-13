@@ -1,0 +1,108 @@
+{
+  "checker": {
+    "dataset": "synthetic only; not evidence of real-world fraud performance",
+    "seed": 42,
+    "train_rows": 3000,
+    "test_rows": 1000,
+    "threshold": 0.5,
+    "positive_test_rows": 155,
+    "precision": 0.36977491961414793,
+    "recall": 0.7419354838709677,
+    "f1": 0.49356223175965663,
+    "roc_auc": 0.826027867913724,
+    "confusion_matrix": [
+      [
+        649,
+        196
+      ],
+      [
+        40,
+        115
+      ]
+    ]
+  },
+  "retrieval": {
+    "benchmark": "8 developer-authored questions over 4 bundled notes; smoke benchmark, not independent validation",
+    "hit_at_1": 1.0,
+    "hit_at_3": 1.0,
+    "cases": [
+      {
+        "question": "How does diversification reduce concentration risk?",
+        "expected": "01_diversification.md",
+        "retrieved": [
+          "01_diversification.md",
+          "04_market_data.md"
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true
+      },
+      {
+        "question": "Does a low price to earnings ratio imply good valuation?",
+        "expected": "02_valuation.md",
+        "retrieved": [
+          "02_valuation.md",
+          "04_market_data.md",
+          "01_diversification.md"
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true
+      },
+      {
+        "question": "How do precision and recall affect transaction fraud review?",
+        "expected": "03_transaction_review.md",
+        "retrieved": [
+          "03_transaction_review.md"
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true
+      },
+      {
+        "question": "Is a daily closing price an executable quote?",
+        "expected": "04_market_data.md",
+        "retrieved": [
+          "04_market_data.md",
+          "02_valuation.md"
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true
+      },
+      {
+        "question": "What happens to false alarms when lowering a score threshold?",
+        "expected": "03_transaction_review.md",
+        "retrieved": [
+          "03_transaction_review.md"
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true
+      },
+      {
+        "question": "Should I compare company margins debt and cash flows?",
+        "expected": "02_valuation.md",
+        "retrieved": [
+          "02_valuation.md"
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true
+      },
+      {
+        "question": "How should I check currency timezone and stale observations?",
+        "expected": "04_market_data.md",
+        "retrieved": [
+          "04_market_data.md"
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true
+      },
+      {
+        "question": "Can different sector holdings still have shared risks?",
+        "expected": "01_diversification.md",
+        "retrieved": [
+          "01_diversification.md"
+        ],
+        "hit_at_1": true,
+        "hit_at_3": true
+      }
+    ]
+  },
+  "generation": "Not evaluated by an LLM judge; no RAGAS or faithfulness score claimed."
+}

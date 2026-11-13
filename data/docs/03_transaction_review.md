@@ -1,0 +1,3 @@
+# Transaction review and model limitations
+Original technical note for the AdvisorIQ demonstration.
+A transaction classifier can prioritize records for review but cannot establish fraud by itself. Foreign transactions, overnight hours, large amounts and merchant-risk inputs may occur in legitimate activity. Precision measures the fraction of flagged examples whose test labels are positive. Recall measures the fraction of positive labels detected. Lowering a score threshold generally flags more records, trading additional detections for more false alarms. Human review and independent confirmation are necessary. Synthetic training labels do not demonstrate real-world fraud performance. The displayed rule indicators are not SHAP values or causal explanations.

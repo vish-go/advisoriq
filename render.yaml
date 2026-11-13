@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: advisoriq
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.lock.txt && python -m advisoriq.setup
+    startCommand: python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.14
+      - key: HOST
+        value: 0.0.0.0
+      - key: LANGSMITH_TRACING
+        value: 'false'
+      - key: GRADIO_ANALYTICS_ENABLED
+        value: 'false'

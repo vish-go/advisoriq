@@ -1,0 +1,22 @@
+{
+  "dataset": "synthetic only; not evidence of real-world fraud performance",
+  "seed": 42,
+  "train_rows": 3000,
+  "test_rows": 1000,
+  "threshold": 0.5,
+  "positive_test_rows": 155,
+  "precision": 0.36977491961414793,
+  "recall": 0.7419354838709677,
+  "f1": 0.49356223175965663,
+  "roc_auc": 0.826027867913724,
+  "confusion_matrix": [
+    [
+      649,
+      196
+    ],
+    [
+      40,
+      115
+    ]
+  ]
+}
